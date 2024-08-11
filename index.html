@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f2;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 70px;
+            position: absolute;
+            bottom: -100px;
+            background-color: #ff99cc;
+            border-radius: 50px;
+            opacity: 0.8;
+            animation: rise 7s infinite;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #ff99cc;
+            transform: translateX(-50%);
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.2);
+                opacity: 0.3;
+            }
+        }
+
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 25%;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 55%;
+            animation-delay: 3s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 70%;
+            animation-delay: 4s;
+        }
+
+        .balloon:nth-child(6) {
+            left: 85%;
+            animation-delay: 5s;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #ff6699;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #cc0066;
+            margin: 20px;
+        }
+
+        .button-container {
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff3399;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #e60073;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff99cc;
+            animation: fall 3s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti:nth-child(odd) {
+            animation-duration: 5s;
+            background-color: #ff66b2;
+        }
+
+        .confetti:nth-child(even) {
+            animation-duration: 4s;
+            background-color: #ff99e6;
+        }
+
+        .confetti:nth-child(1) { left: 10%; }
+        .confetti:nth-child(2) { left: 20%; }
+        .confetti:nth-child(3) { left: 30%; }
+        .confetti:nth-child(4) { left: 40%; }
+        .confetti:nth-child(5) { left: 50%; }
+        .confetti:nth-child(6) { left: 60%; }
+        .confetti:nth-child(7) { left: 70%; }
+        .confetti:nth-child(8) { left: 80%; }
+        .confetti:nth-child(9) { left: 90%; }
+        .confetti:nth-child(10) { left: 100%; }
+    </style>
+</head>
+<body>
+
+    <h1>FELIZ ANIVERSÁRIO, CARA DE PERCATA</h1>
+    <p>você sempre vai ser especial pra mim, te amo pra sempre. e vai morder é, neguinha? cara de percata do carai.</p>
+    
+    <div class="button-container">
+        <a href="https://open.spotify.com/playlist/6c3Xm8kiRzwc94QrF0VjGd?si=I27UrIu7QdqudGI0l35nJQ&pi=u-v6DYtiQ4R_yu" target="_blank" class="btn">Clique aqui</a>
+    </div>
+
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+</body>
+</html>
